@@ -2,7 +2,7 @@
 //are exact matches, otherwises it tests the host name against the regex
 //to see if it should block it
 const hiddenWebsites = [/.*\.pinterest\..*/, /pinterest\..*/];
-const domain = unsafeWindow.location.hostname;
+const domain = window.location.hostname;
 
 function isBannedHostname(hostname)
 {
