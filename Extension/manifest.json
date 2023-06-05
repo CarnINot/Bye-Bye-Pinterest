@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "Bye Bye Pinterest",
+    "version": "0.1",
+    
+    "description": "An Extension to Hide Pinterest from Search and Image Results. (This extension is not affiliated with Pinterest the company.)",
+
+    "icons": {
+	"512": "icons/icon.png"
+    },
+    
+    "permissions": [
+	"webNavigation"
+    ],
+    "author": "Carn",
+    
+    "content_scripts": [
+	{
+	    "matches": ["*://html.duckduckgo.com/*",
+			"*://yandex.com/*",
+			"*://search.yahoo.com/*",
+			"*://search.yahoo.co.jp/*",
+			"*://ya.ru/*",
+			"*://yandex.eu/*",
+			"*://yandex.ru/*",
+			"*://search.yahoo.com/*",
+			"*://www.ecosia.org/*",
+			"*://duckduckgo.com/*",
+			"*://www.google.com/*"],
+	    "js": ["website-zapper.js"]
+	}
+    ]
+
+}
